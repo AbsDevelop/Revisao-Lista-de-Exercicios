@@ -1,0 +1,164 @@
+1 – Desenvolva um programa que efetue o cálculo da área de uma circunferência, apresentando a medida da área calculada.
+Fórmula : Area=Pi*Raio²
+
+public static void Main()
+	{
+		double area, raio;
+		Console.WriteLine("Bem-vindo ao Programa Circunferênciando");
+		Console.WriteLine("Digite o valor do raio da circunferência:");
+		raio = double.Parse(Console.ReadLine());
+		area = Math.PI * Math.Pow(raio, 2);
+		Console.WriteLine("A área da sua cincunferência é "+ Math.Round(area, 2) +"cm");
+	}
+
+2 – Elaborar um algoritmo que calcule o salário de um professor onde o usuário deverá entrar com o número de aulas dadas, 
+o valor da hora aula e o percentual de desconto do INSS.
+
+public static void Main()
+	{
+		double salario, aulas, Vlhora, inssper, inssdes;
+		Console.WriteLine("Bem-vindo ao Programa Salário e Suas Hora-Aulas");
+		Console.WriteLine("Digite a quantidade de aulas dadas pelo professor:");
+		aulas = double.Parse(Console.ReadLine());
+		Console.WriteLine("Digite o valor de uma aula dada pelo professor:");
+		Vlhora= double.Parse(Console.ReadLine());
+		Console.WriteLine("Digite o percentual de desconto do INSS:");
+		inssper = double.Parse(Console.ReadLine());
+		inssdes = ((aulas * Vlhora) / 100) * inssper;
+		salario = (aulas * Vlhora) - inssdes;
+		Console.WriteLine("O salário desse professor é R$" + salario + " por mês");	
+	}
+
+3 – Elabore um programa para ler dois valores A e B, efetuar a troca dos valores de forma que a variável A passe a possuir 
+o valor da variável B e que a variável B passe a possuir o valor da variável A. Apresentar os valores trocados
+
+public static void Main()
+	{
+		int a, b;
+		Console.WriteLine("Bem-vindo ao Programa Troca de Valores");
+		Console.WriteLine("Digite o valor de A:");
+		a = int.Parse(Console.ReadLine());
+		Console.WriteLine("Digite o valor de B:");
+		b = int.Parse(Console.ReadLine());
+		Console.WriteLine("O valor de A agora é "+ b +". E o valor de B agora é "+ a +".");
+	}
+
+4 – Elabore um programa para ler dois valores A e B, efetuar as operações de adição, subtração, multiplicação e divisão de
+A por B, apresentando no final os quatro resultados obtidos.
+
+public static void Main()
+	{
+		int a, b, adic, subtr, multip, divis;
+		Console.WriteLine("Bem-vindo ao Programa de Cálculos Aritméticos");
+		Console.WriteLine("Digite o valor de A:");
+		a = int.Parse(Console.ReadLine());
+		Console.WriteLine("Digite o valor de B:");
+		b = int.Parse(Console.ReadLine());
+		adic = a + b;
+		subtr = a - b;
+		multip = a * b;
+		divis =  a / b;
+		Console.WriteLine("Os Cálculos Aritméticos entre A e B são: \r\n" + "Adição: " + adic + "\r\nSubtração: " + subtr + "\r\nMultiplicação: " + multip + "\r\nDivisão: " + divis);
+	}
+
+5 – Elabore um programa para efetuar o cálculo do valor de uma prestação em atraso, utilizando a fórmula:
+PRESTAÇÃO:=VALOR+(VALOR*(TAXA/100)*TEMPO).
+
+public static void Main()
+	{
+		double prest, valor, taxa, temp;
+		Console.WriteLine("Bem-vindo ao Programa Prestacionando");
+		Console.WriteLine("Digite o valor a pagar:");
+		valor = double.Parse(Console.ReadLine());
+		Console.WriteLine("Digite a taxa de atraso:");
+		taxa = double.Parse(Console.ReadLine());
+		Console.WriteLine("Digite a tempo de atraso:");
+		temp = double.Parse(Console.ReadLine());
+		prest = valor + (valor * (taxa/100) * temp);
+		Console.WriteLine("Com seu atraso, sua prestação fica a R$" + prest + "\r\n--->Não se atrase de novo!<---");
+	}
+
+6 - Elabore um programa de calculadora com as operações básicas, apresentando um menu com as opções das operações e 
+uma opção 0-Sair, o programa só encerra se o usuário escolher 0 para sair.
+
+public static void Main()
+	{
+      	int opcao;
+	Console.WriteLine("Bem-vindo a Calculadora Básica\nO que deseja fazer?");
+  	Console.WriteLine("1)Soma\r\n2)Subtração\r\n3)Multiplicação\r\n4)Divisão\r\n5)Resto da Divisão\r\n0)Sair");
+ 		opcao = int.Parse(Console.ReadLine());
+  		 switch(opcao)
+		 {
+     	 	case 1:
+          		Somar();
+          		break;
+      		case 2:
+          		Subtrair();
+          		break;
+      		case 3:
+          		Multiplicar();
+          		break;
+      		case 4:
+         		Dividir();
+         		break;
+			case 5:
+          		RestoDivisão();
+          		break;
+      		case 0:
+         		Sair();
+         		break;	  
+     		default:
+         Console.WriteLine("operação desconhecida");  
+         break;          
+    	}
+  }
+
+  	static void Somar()
+	{
+    	double a,b;
+    	Console.WriteLine("Digite o primeiro valor");
+    	a = double.Parse(Console.ReadLine());
+    	Console.WriteLine("Digite o segundo valor");
+    	b = double.Parse(Console.ReadLine());
+    	Console.WriteLine("{0}+{1}={2}",a,b,(a+b));
+  	}
+  	static void Subtrair()
+	{
+    	double a,b;
+    	Console.WriteLine("Digite o primeiro valor");
+    	a = double.Parse(Console.ReadLine());
+    	Console.WriteLine("Digite o segundo valor");
+    	b = double.Parse(Console.ReadLine());
+    	Console.WriteLine("{0}-{1}={2}",a,b,(a-b));
+  	}
+    static void Multiplicar()
+	{
+    	double a,b;
+    	Console.WriteLine("Digite o primeiro valor");
+    	a = double.Parse(Console.ReadLine());
+    	Console.WriteLine("Digite o segundo valor");
+    	b = double.Parse(Console.ReadLine());
+    	Console.WriteLine("{0}*{1}={2}",a,b,(a*b));
+  	}
+    static void Dividir()
+	{
+    	double a,b;
+    	Console.WriteLine("Digite o primeiro valor");
+    	a = double.Parse(Console.ReadLine());
+    	Console.WriteLine("Digite o segundo valor");
+    	b = double.Parse(Console.ReadLine());
+    	Console.WriteLine("{0}/{1}={2}",a,b,(a/b));
+  	}	
+	static void RestoDivisão()
+	{
+    	double a,b;
+    	Console.WriteLine("Digite o primeiro valor");
+    	a = double.Parse(Console.ReadLine());
+    	Console.WriteLine("Digite o segundo valor");
+    	b = double.Parse(Console.ReadLine());
+    	Console.WriteLine("{0}%{1}={2}",a,b,(a%b));
+  	}	
+    static void Sair()
+	{
+    Console.WriteLine("Tchauu (◔‿◔)");
+}
